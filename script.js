@@ -7,13 +7,8 @@ const songs = [
 ];
 
 function getRandomSongs(num) {
-    // Fisher-Yatesアルゴリズムでシャッフル
-    const shuffled = [...songs]; // 元の配列をコピー
-    for (let i = shuffled.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1)); // 0からiの間のランダムなインデックス
-        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]; // 要素を交換
-    }
-    return shuffled.slice(0, num); // シャッフルされた配列から最初のnum曲を返す
+    const shuffled = songs.sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, num);
 }
 
 // ボタンがクリックされたときの処理
