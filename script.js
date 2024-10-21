@@ -7,8 +7,12 @@ const songs = [
 ];
 
 function getRandomSongs(num) {
-    const shuffled = songs.sort(() => 0.5 - Math.random());
-    return shuffled.slice(0, num);
+    const shuffled = [...songs]; // 元の配列をコピー
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1)); // ランダムなインデックス
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]; // 要素を交換
+    }
+    return shuffled.slice(0, num); // 最初のnum曲を返す
 }
 
 // ボタンがクリックされたときの処理
@@ -17,9 +21,11 @@ document.getElementById('randomizeBtn').addEventListener('click', () => {
     const songListDiv = document.getElementById('songList');
     songListDiv.innerHTML = ''; // 以前の結果をクリア
 
-selectedSongs.forEach(song => {
-    const songItem = document.createElement('div');
-    songItem.className = 'song-item'; // クラスを追加
-    songItem.textContent = song.曲名; // 曲名を表示
-    songListDiv.appendChild(songItem);
+    selectedSongs.forEach(song => {
+        const songItem = document.createElement('div');
+        songItem.className = 'song-item'; // クラスを追加
+        songItem.textContent = song.曲名; // 曲名を表示
+        songListDiv.appendChild(songItem);
+    });
 });
+
