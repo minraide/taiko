@@ -6,3 +6,8 @@ body {
 #songList {
     margin-top: 20px;
 }
+
+.song-item {
+    font-size: 24px; /* 曲名のフォントサイズを変更 */
+    margin: 10px 0; /* 各曲名の間にスペースを追加 */
+}
