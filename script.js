@@ -7,8 +7,6 @@ const songs = [
     { title: "Song F", artist: "Artist F" },
     { title: "Song G", artist: "Artist G" },
     { title: "Song H", artist: "Artist H" }
-
-    
 ];
 
 function getRandomSongs(num) {
