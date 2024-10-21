@@ -6,7 +6,7 @@ const songs = [
     { title: "Song E", artist: "Artist E" },
     { title: "Song F", artist: "Artist F" },
     { title: "Song G", artist: "Artist G" },
-    { title: "Song H", artist: "Artist H" },
+    { title: "Song H", artist: "Artist H" }
 
     
 ];
