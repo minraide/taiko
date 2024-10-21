@@ -22,10 +22,9 @@ document.getElementById('randomizeBtn').addEventListener('click', () => {
     const songListDiv = document.getElementById('songList');
     songListDiv.innerHTML = ''; // 以前の結果をクリア
 
-    selectedSongs.forEach(song => {
-        const songItem = document.createElement('div');
-        songItem.textContent = song.曲名; // 曲名を表示
-        songListDiv.appendChild(songItem);
-    });
+selectedSongs.forEach(song => {
+    const songItem = document.createElement('div');
+    songItem.className = 'song-item'; // クラスを追加
+    songItem.textContent = song.曲名; // 曲名を表示
+    songListDiv.appendChild(songItem);
 });
-
