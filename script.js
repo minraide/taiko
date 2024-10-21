@@ -2,8 +2,8 @@ const songs = [
     { 曲名: "Song A" },
     { 曲名: "Song B" },
     { 曲名: "Song C" },
-    { 曲名: "Song D" }, 
-    { 曲名: "Song E" }  
+    { 曲名: "Song D" },
+    { 曲名: "Song E" }
 ];
 
 function getRandomSongs(num) {
@@ -15,7 +15,6 @@ function getRandomSongs(num) {
     return shuffled.slice(0, num); // 最初のnum曲を返す
 }
 
-// ボタンがクリックされたときの処理
 document.getElementById('randomizeBtn').addEventListener('click', () => {
     const selectedSongs = getRandomSongs(3); // 3曲を選ぶ
     const songListDiv = document.getElementById('songList');
@@ -28,4 +27,3 @@ document.getElementById('randomizeBtn').addEventListener('click', () => {
         songListDiv.appendChild(songItem);
     });
 });
-
