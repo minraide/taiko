@@ -1,27 +1,31 @@
 const songs = [
-    { title: "Song A", artist: "Artist A" },
-    { title: "Song B", artist: "Artist B" },
-    { title: "Song C", artist: "Artist C" },
-    { title: "Song D", artist: "Artist D" },
-    { title: "Song E", artist: "Artist E" },
-    { title: "Song F", artist: "Artist F" },
-    { title: "Song G", artist: "Artist G" },
-    { title: "Song H", artist: "Artist H" }
+    { 曲名: "Song A" },
+    { 曲名: "Song B" },
+    { 曲名: "Song C" },
+    { 曲名: "Song D" }, 
+    { 曲名: "Song E" }  
 ];
 
 function getRandomSongs(num) {
-    const shuffled = songs.sort(() => 0.5 - Math.random());
-    return shuffled.slice(0, num);
+    // Fisher-Yatesアルゴリズムでシャッフル
+    const shuffled = [...songs]; // 元の配列をコピー
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1)); // 0からiの間のランダムなインデックス
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]; // 要素を交換
+    }
+    return shuffled.slice(0, num); // シャッフルされた配列から最初のnum曲を返す
 }
 
+// ボタンがクリックされたときの処理
 document.getElementById('randomizeBtn').addEventListener('click', () => {
-    const selectedSongs = getRandomSongs(3);
+    const selectedSongs = getRandomSongs(3); // 3曲を選ぶ
     const songListDiv = document.getElementById('songList');
-    songListDiv.innerHTML = '';
+    songListDiv.innerHTML = ''; // 以前の結果をクリア
 
     selectedSongs.forEach(song => {
         const songItem = document.createElement('div');
-        songItem.textContent = `${song.title} - ${song.artist}`;
+        songItem.textContent = song.曲名; // 曲名を表示
         songListDiv.appendChild(songItem);
     });
 });
+
