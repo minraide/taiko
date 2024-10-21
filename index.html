@@ -5,19 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ランダム曲選択</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
     <link rel="manifest" href="manifest.json">
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('service-worker.js').then(function(registration) {
-                    console.log('Service Worker registered with scope:', registration.scope);
-                }, function(error) {
-                    console.log('Service Worker registration failed:', error);
-                });
-            });
-        }
-    </script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -61,6 +49,19 @@
     <button id="randomizeBtn">曲を選ぶ</button>
     <div id="songList"></div>
     <div id="errorMessage" class="error-message"></div> <!-- エラーメッセージ表示用 -->
-    <script src="script.js"></script>
+    
+    <script src="script.js"></script> <!-- script.jsの読み込み -->
+    
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('service-worker.js').then(function(registration) {
+                    console.log('Service Worker registered with scope:', registration.scope);
+                }, function(error) {
+                    console.log('Service Worker registration failed:', error);
+                });
+            });
+        }
+    </script>
 </body>
 </html>
