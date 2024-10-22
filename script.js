@@ -552,9 +552,145 @@ const songsList2 = [
 	{ 曲名: "ネクロファンタジア ～ Arr.Demetori" },
 	{ 曲名: "拝啓ドッペルゲンガー" },
 	{ 曲名: "mint tears" }
+	
 ];
 
-// 曲をランダムに取得する関数
+const songsList3 = [
+    { 曲名: "イオシス秋の爆食祭2024" },
+    { 曲名: "Irregular Clock（裏）" },
+    { 曲名: "オペレート・ミー（裏）" },
+    { 曲名: "第六天魔王（裏）" },
+    { 曲名: "for Q（裏）" },
+    { 曲名: "Infinite Rebellion" },
+    { 曲名: "彁（裏）" },
+    { 曲名: "The Future of the 太鼓ドラム（裏）" },
+    { 曲名: "神竜 ～Shinryu～（裏）" },
+    { 曲名: "Central Dogma Pt.1（裏）" },
+    { 曲名: "憎悪と醜悪の花束（裏）" },
+    { 曲名: "第六天魔王" },
+    { 曲名: "ダンガンノーツ（裏）" },
+    { 曲名: "Destination 2F29" },
+    { 曲名: "ドンカマ2000" },
+    { 曲名: "23時54分 陽の旅路へのプレリュード（裏）" },
+    { 曲名: "Vixtory（裏）" },
+    { 曲名: "poxei♦DOON" },
+    { 曲名: "幽玄ノ乱" },
+    { 曲名: "ラ・モレーナ・クモナイ（裏）" },
+    { 曲名: "!!!カオスタイム!!!" },
+    { 曲名: "カオスタイム the DARK" },
+    { 曲名: "疾風怒濤（裏）" },
+    { 曲名: "双竜ノ乱" },
+    { 曲名: "!!!チルノのパーフェクトさんすうタイム!!!" },
+    { 曲名: "まださいたま2000" },
+    { 曲名: "彁（表）" },
+    { 曲名: "CUT! into the FUTURE（裏）" },
+    { 曲名: "Calamity Fortune（裏）" },
+    { 曲名: "業 -善なる神とこの世の悪について-（裏）" },
+    { 曲名: "狂瀾怒濤（裏）" },
+    { 曲名: "Coquette" },
+    { 曲名: "スーハー2000" },
+    { 曲名: "続・〆ドレー2000" },
+    { 曲名: "そして勇者は眠りにつく（裏）" },
+    { 曲名: "Taiko Drum Monster（裏）" },
+    { 曲名: "魑魅魍魎" },
+    { 曲名: "Challengers" },
+    { 曲名: "≠ＭＭ" },
+    { 曲名: "とける（裏）" },
+    { 曲名: "初音ミクの消失‐劇場版‐（裏）" },
+    { 曲名: "星屑ストラック（裏）" },
+    { 曲名: "Lδchesis（裏）" },
+    { 曲名: "λ7708" },
+    { 曲名: "わら得る2000" },
+    { 曲名: "Xa（裏）" },
+    { 曲名: "氷竜～Kooryu～（裏）" },
+    { 曲名: "Genesis Ray（裏）" },
+    { 曲名: "たいこの2000" },
+    { 曲名: "チャーリーダッシュ！" },
+    { 曲名: "Nosferatu（裏）" },
+    { 曲名: "Hurtling Boys" },
+    { 曲名: "モノクロボイス（裏）" },
+    { 曲名: "UFO Swingin" },
+    { 曲名: "アムピト◇リーテー" },
+    { 曲名: "美しく忙しきドナウ（裏）" },
+    { 曲名: "ouroboros -twin stroke of the end-" },
+    { 曲名: "χ談" },
+    { 曲名: "カラフル" },
+    { 曲名: "彼は誰時の誘惑（裏）" },
+    { 曲名: "ココドコ？多分ドッカ島！（裏）" },
+    { 曲名: "コネクトカラーズ" },
+    { 曲名: "GORI × GORI × SafaRI（裏）" },
+    { 曲名: "The Future of the 太鼓ドラム（表）" },
+    { 曲名: "万戈イム－一ノ十" },
+    { 曲名: "青天の黎明" },
+    { 曲名: "Central Dogma Pt.2" },
+    { 曲名: "Taiko Drum Monster（表）" },
+    { 曲名: "DEBSTEP!" },
+    { 曲名: "Dreadnought（裏）" },
+    { 曲名: "Dont Stop the Game" },
+    { 曲名: "HARDCOREノ心得" },
+    { 曲名: "幕末維新譚" },
+    { 曲名: "バチムチ マッスルキングダム" },
+    { 曲名: "パン vs ごはん！ 大決戦！（裏）[達人]" },
+    { 曲名: "Behemoth" },
+    { 曲名: "まるくてはやくてすさまじいリズム" },
+    { 曲名: "モノクロームユートピア" },
+    { 曲名: "ラパスの虹（裏）" },
+    { 曲名: "赤と白薔薇の魔女" },
+    { 曲名: "あめふりのロンド（裏）" },
+    { 曲名: "ON SAY GO SAY（裏）" },
+    { 曲名: "カルメン組曲 一番終曲（裏）" },
+    { 曲名: "森羅万象[開幕達人]" },
+    { 曲名: "双竜ノ乱【双打】" },
+    { 曲名: "デッド・オア・ダイ" },
+    { 曲名: "23時54分、陽の旅路へのプレリュード" },
+    { 曲名: "にゃーにゃーにゃー" },
+    { 曲名: "メタナイトの逆襲メドレー（裏）" },
+    { 曲名: "8OROCHI（裏）" },
+    { 曲名: "哀 want U" },
+    { 曲名: "或ル不和" },
+    { 曲名: "VERTeX" },
+    { 曲名: "ウルトラマンX（裏）" },
+    { 曲名: "郢曲／暁闇" },
+    { 曲名: "Agent Hustle & Dr. Hassle（表）" },
+    { 曲名: "GERBERA" },
+    { 曲名: "〆ドレー2000" },
+    { 曲名: "重金属フューギティブ" },
+    { 曲名: "Xevel" },
+    { 曲名: "其方、激昂" },
+    { 曲名: "SORA-VII シグナスウォール" },
+	{ 曲名: "超絶技巧系少女" },
+	{ 曲名: "テトラリュトモスフォビア" },
+	{ 曲名: "天泣の律" },
+	{ 曲名: "転生 TENSEI -喜与志が待つ強者-（裏）" },
+	{ 曲名: "Toon Towns Toys Tune" },
+	{ 曲名: "ナイトメア・サバイバー（裏）" },
+	{ 曲名: "BATTLE NO.1" },
+	{ 曲名: "Honey Heartbeat ～10 Stars Mix～（裏）" },
+	{ 曲名: "Parousia" },
+	{ 曲名: "パン vs ごはん！ 大決戦！（表）" },
+	{ 曲名: "プチポチ" },
+	{ 曲名: "FLOWER（裏）" },
+	{ 曲名: "もぺもぺ" },
+	{ 曲名: "螺旋周回軌道（裏）" },
+	{ 曲名: "LECIEL GLISSANDO" },
+	{ 曲名: "冷凍庫CJ ～嗚呼面太鼓ブラザーズ～" },
+	{ 曲名: "ARMAGEΔDON" },
+	{ 曲名: "EterNal Ring" },
+	{ 曲名: "懐中庭園を持つ少女" },
+	{ 曲名: "絡繰廻廊" },
+	{ 曲名: "Caribbean Knight" },
+	{ 曲名: "GIGALODOON（裏）" },
+	{ 曲名: "鼓立あおはる学園校歌" },
+	{ 曲名: "束ね糸" },
+	{ 曲名: "チルノのパーフェクトさんすう教室➈周年バージョン（裏）" },
+	{ 曲名: "儚姫は原初に舞う（裏）" },
+	{ 曲名: "ひよこ鑑定士さん" },
+	{ 曲名: "BLAZING VORTEX（裏）" },
+	{ 曲名: "Players High" }
+	
+];
+
+// ランダムに曲を選ぶ関数
 function getRandomSongs(songs, num) {
     const shuffled = [...songs]; // 元の配列をコピー
     for (let i = shuffled.length - 1; i > 0; i--) {
@@ -564,29 +700,41 @@ function getRandomSongs(songs, num) {
     return shuffled.slice(0, num); // 最初のnum曲を返す
 }
 
-// 1つ目のボタンのイベントリスナー
+// ボタンにイベントリスナーを追加
 document.getElementById('randomizeBtn').addEventListener('click', () => {
-    const selectedSongs = getRandomSongs(songsList1, 4); // songsList1から4曲を選ぶ
+    const selectedSongs = getRandomSongs(songsList1, 4); // 曲リスト1から4曲を選ぶ
     const songListDiv = document.getElementById('songList');
     songListDiv.innerHTML = ''; // 以前の結果をクリア
 
     selectedSongs.forEach(song => {
         const songItem = document.createElement('div');
-        songItem.className = 'song-item'; // クラスを追加
+        songItem.className = 'song-item';
         songItem.textContent = song.曲名; // 曲名を表示
         songListDiv.appendChild(songItem);
     });
 });
 
-// 2つ目のボタンのイベントリスナー
 document.getElementById('randomizeBtn2').addEventListener('click', () => {
-    const selectedSongs = getRandomSongs(songsList2, 4); // songsList2から4曲を選ぶ
-    const songListDiv = document.getElementById('songList');
+    const selectedSongs = getRandomSongs(songsList2, 4); // 曲リスト2から4曲を選ぶ
+    const songListDiv = document.getElementById('songList2');
     songListDiv.innerHTML = ''; // 以前の結果をクリア
 
     selectedSongs.forEach(song => {
         const songItem = document.createElement('div');
-        songItem.className = 'song-item'; // クラスを追加
+        songItem.className = 'song-item';
+        songItem.textContent = song.曲名; // 曲名を表示
+        songListDiv.appendChild(songItem);
+    });
+});
+
+document.getElementById('randomizeBtn3').addEventListener('click', () => {
+    const selectedSongs = getRandomSongs(songsList3, 4); // 曲リスト3から4曲を選ぶ
+    const songListDiv = document.getElementById('songList3');
+    songListDiv.innerHTML = ''; // 以前の結果をクリア
+
+    selectedSongs.forEach(song => {
+        const songItem = document.createElement('div');
+        songItem.className = 'song-item';
         songItem.textContent = song.曲名; // 曲名を表示
         songListDiv.appendChild(songItem);
     });
