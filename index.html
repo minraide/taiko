@@ -9,50 +9,55 @@
 
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self';"> <!-- CSP設定 -->
 
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        text-align: center;
-        background-color: #f4f4f4;
-        color: #333; /* 文字の色 */
-    }
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            color: #333; /* 文字の色 */
+        }
 
-    h1 {
-        margin-bottom: 20px;
-        color: #4CAF50; /* タイトルの色 */
-    }
+        h1 {
+            margin-bottom: 20px;
+            color: #4CAF50; /* タイトルの色 */
+        }
 
-    #randomizeBtn {
-        padding: 10px 20px;
-        font-size: 16px;
-        background-color: #4CAF50; /* ボタンの色 */
-        color: white; /* ボタンの文字色 */
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
+        #randomizeBtn, #randomizeBtn2 {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50; /* ボタンの色 */
+            color: white; /* ボタンの文字色 */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px; /* ボタンの間隔を追加 */
+        }
 
-    #randomizeBtn:hover {
-        background-color: #45a049; /* ホバー時の色 */
-    }
+        #randomizeBtn:hover, #randomizeBtn2:hover {
+            background-color: #45a049; /* ホバー時の色 */
+        }
 
-    #songList {
-        margin-top: 20px;
-        font-size: 24px; /* 曲名のフォントサイズ */
-        text-align: left; /* 左揃えにする */
-        padding-left: 20px; /* 左の余白を追加 */
-    }
+        #songList {
+            margin-top: 20px;
+            font-size: 24px; /* 曲名のフォントサイズ */
+            text-align: left; /* 左揃えにする */
+            padding-left: 20px; /* 左の余白を追加 */
+        }
 
-    .error-message {
-        color: red; /* エラーメッセージの色 */
-        font-size: 18px;
-    }
-</style>
+        .song-item {
+            margin: 5px 0; /* 各曲名の間隔 */
+        }
 
+        .error-message {
+            color: red; /* エラーメッセージの色 */
+            font-size: 18px;
+        }
+    </style>
 </head>
 <body>
     <h1>ランダム曲選択</h1>
-    <button id="randomizeBtn">曲を選ぶ</button>
+    <button id="randomizeBtn">曲を選ぶ（リスト1）</button>
+    <button id="randomizeBtn2">曲を選ぶ（リスト2）</button> <!-- 新しいボタン -->
     <div id="songList"></div>
     <div id="errorMessage" class="error-message"></div> <!-- エラーメッセージ表示用 -->
 
