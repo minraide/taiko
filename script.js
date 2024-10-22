@@ -1,6 +1,10 @@
 const songs = [
 
-    { 曲名: "Song D" },
+    { 曲名: "イオシス秋の爆食祭2024" },
+    { 曲名: "Irregular Clock（裏）" },
+    { 曲名: "オペレート・ミー（裏）" },
+    { 曲名: "第六天魔王（裏）" },
+    { 曲名: "for Q（裏）" },
     { 曲名: "Infinite Rebellion" },
     { 曲名: "彁（裏）" },
     { 曲名: "The Future of the 太鼓ドラム（裏）" },
