@@ -28,8 +28,8 @@ h1 {
 #songList {
     margin-top: 20px; /* 曲リストの上の余白 */
     font-size: 24px; /* 曲名のフォントサイズ */
-    text-align: left; /* 曲名を左揃え */
-    padding-left: 20px; /* 左の余白 */
+    text-align: center; /* 曲名を中央揃え */
+    padding-left: 20px; /* 左の余白（必要に応じて調整） */
 }
 
 .song-item {
