@@ -739,7 +739,7 @@ document.getElementById('randomizeBtn3').addEventListener('click', () => {
     clearSongLists(); // すべての曲リストをクリア
     const selectedSongs = getRandomSongs(songsList3, 4); // 4曲を選ぶ
     const songListDiv = document.getElementById('songList3');
-    document.getElementById('resultTitle').textContent = "曲リスト3からの選曲結果"; // 結果のタイトルを表示
+    document.getElementById('resultTitle').textContent = "双打除く個人差A以上から選曲"; // 結果のタイトルを表示
 
     selectedSongs.forEach(song => {
         const songItem = document.createElement('div');
