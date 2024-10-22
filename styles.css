@@ -8,6 +8,7 @@ body {
 h1 {
     margin-bottom: 20px; /* タイトルの下の余白 */
     color: #4CAF50; /* タイトルの色 */
+    text-align: center; /* タイトルを中央揃え */
 }
 
 #randomizeBtn, #randomizeBtn2 {
