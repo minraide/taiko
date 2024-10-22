@@ -688,37 +688,58 @@ const songsList3 = [
 ];
 
 function getRandomSongs(songs, num) {
-    const shuffled = [...songs];
+    const shuffled = [...songs]; // 元の配列をコピー
     for (let i = shuffled.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+        const j = Math.floor(Math.random() * (i + 1)); // ランダムなインデックス
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]; // 要素を交換
     }
-    return shuffled.slice(0, num);
+    return shuffled.slice(0, num); // 最初のnum曲を返す
 }
 
-function displaySongs(songs, containerId) {
-    const songListDiv = document.getElementById(containerId);
+// 1つ目のボタンのイベントリスナー
+document.getElementById('randomizeBtn').addEventListener('click', () => {
+    const selectedSongs = getRandomSongs(songsList1, 4); // 4曲を選ぶ
+    const songListDiv = document.getElementById('songList');
+    const resultTitle = document.getElementById('resultTitle');
     songListDiv.innerHTML = ''; // 以前の結果をクリア
+    resultTitle.textContent = "☆10全曲からの選曲結果"; // 結果のタイトルを表示
 
-    songs.forEach(song => {
+    selectedSongs.forEach(song => {
         const songItem = document.createElement('div');
         songItem.className = 'song-item';
         songItem.textContent = song.曲名; // 曲名を表示
         songListDiv.appendChild(songItem);
     });
-}
-
-document.getElementById('randomizeBtn').addEventListener('click', () => {
-    const selectedSongs = getRandomSongs(songsList1, 4);
-    displaySongs(selectedSongs, 'songList');
 });
 
+// 2つ目のボタンのイベントリスナー
 document.getElementById('randomizeBtn2').addEventListener('click', () => {
-    const selectedSongs = getRandomSongs(songsList2, 4);
-    displaySongs(selectedSongs, 'songList2');
+    const selectedSongs = getRandomSongs(songsList2, 4); // 4曲を選ぶ
+    const songListDiv = document.getElementById('songList2');
+    const resultTitle = document.getElementById('resultTitle');
+    songListDiv.innerHTML = ''; // 以前の結果をクリア
+    resultTitle.textContent = "A＋以下からの選曲結果"; // 結果のタイトルを表示
+
+    selectedSongs.forEach(song => {
+        const songItem = document.createElement('div');
+        songItem.className = 'song-item';
+        songItem.textContent = song.曲名; // 曲名を表示
+        songListDiv.appendChild(songItem);
+    });
 });
 
+// 3つ目のボタンのイベントリスナー
 document.getElementById('randomizeBtn3').addEventListener('click', () => {
-    const selectedSongs = getRandomSongs(songsList3, 4);
-    displaySongs(selectedSongs, 'songList3');
+    const selectedSongs = getRandomSongs(songsList3, 4); // 4曲を選ぶ
+    const songListDiv = document.getElementById('songList3');
+    const resultTitle = document.getElementById('resultTitle');
+    songListDiv.innerHTML = ''; // 以前の結果をクリア
+    resultTitle.textContent = "曲リスト3からの選曲結果"; // 結果のタイトルを表示
+
+    selectedSongs.forEach(song => {
+        const songItem = document.createElement('div');
+        songItem.className = 'song-item';
+        songItem.textContent = song.曲名; // 曲名を表示
+        songListDiv.appendChild(songItem);
+    });
 });
