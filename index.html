@@ -40,7 +40,7 @@
         #songList, #songList2, #songList3 {
             margin-top: 20px;
             font-size: 24px; /* 曲名のフォントサイズ */
-            text-align: left; /* 左揃えにする */
+            text-align: center; /* 曲名を中央揃え */
             padding-left: 20px; /* 左の余白を追加 */
         }
 
@@ -61,7 +61,7 @@
             font-size: 14px; /* フォントサイズ */
             color: #333; /* 文字の色 */
         }    
-        
+
         .error-message {
             color: red; /* エラーメッセージの色 */
             font-size: 18px;
@@ -71,12 +71,12 @@
 <body>
     <h1>ランダム曲選択</h1>
     <button id="randomizeBtn">双打除く☆10全曲から選曲</button>
-    <button id="randomizeBtn2">双打除くA＋以下から選曲</button>
-    <button id="randomizeBtn3">双打除く個人差A以上から選曲</button> 
+    <button id="randomizeBtn2">双打除くA＋以下から選曲</button> 
+    <button id="randomizeBtn3">双打除く個人差A以上から選曲</button>
     
-    <div id="songList"></div>
-    <div id="songList2"></div> <!-- 曲リスト2の表示用 -->
-    <div id="songList3"></div> <!-- 曲リスト3の表示用 -->
+    <div id="songList"></div>  <!-- 曲リスト1用 -->
+    <div id="songList2"></div> <!-- 曲リスト2用 -->
+    <div id="songList3"></div> <!-- 曲リスト3用 -->
     
     <div id="errorMessage" class="error-message"></div> <!-- エラーメッセージ表示用 -->
 
