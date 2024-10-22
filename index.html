@@ -9,43 +9,46 @@
 
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self';"> <!-- CSP設定 -->
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f4f4f4;
-            color: #333; /* 文字の色 */
-        }
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f4f4f4;
+        color: #333; /* 文字の色 */
+    }
 
-        h1 {
-            margin-bottom: 20px;
-            color: #4CAF50; /* タイトルの色 */
-        }
+    h1 {
+        margin-bottom: 20px;
+        color: #4CAF50; /* タイトルの色 */
+    }
 
-        #randomizeBtn {
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #4CAF50; /* ボタンの色 */
-            color: white; /* ボタンの文字色 */
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+    #randomizeBtn {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #4CAF50; /* ボタンの色 */
+        color: white; /* ボタンの文字色 */
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
 
-        #randomizeBtn:hover {
-            background-color: #45a049; /* ホバー時の色 */
-        }
+    #randomizeBtn:hover {
+        background-color: #45a049; /* ホバー時の色 */
+    }
 
-        #songList {
-            margin-top: 20px;
-            font-size: 24px; /* 曲名のフォントサイズ */
-        }
+    #songList {
+        margin-top: 20px;
+        font-size: 24px; /* 曲名のフォントサイズ */
+        text-align: left; /* 左揃えにする */
+        padding-left: 20px; /* 左の余白を追加 */
+    }
 
-        .error-message {
-            color: red; /* エラーメッセージの色 */
-            font-size: 18px;
-        }
-    </style>
+    .error-message {
+        color: red; /* エラーメッセージの色 */
+        font-size: 18px;
+    }
+</style>
+
 </head>
 <body>
     <h1>ランダム曲選択</h1>
