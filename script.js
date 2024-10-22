@@ -314,7 +314,7 @@ function getRandomSongs(num) {
 }
 
 document.getElementById('randomizeBtn').addEventListener('click', () => {
-    const selectedSongs = getRandomSongs(3); // 3曲を選ぶ
+    const selectedSongs = getRandomSongs(4); // 4曲を選ぶ
     const songListDiv = document.getElementById('songList');
     songListDiv.innerHTML = ''; // 以前の結果をクリア
 
