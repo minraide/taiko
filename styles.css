@@ -1,66 +1,56 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #f4f4f4; /* 背景色 */
+    background-color: #f4f4f4;
     color: #333; /* 文字の色 */
 }
 
 h1 {
-    margin-bottom: 20px; /* タイトルの下の余白 */
+    margin-bottom: 20px;
     color: #4CAF50; /* タイトルの色 */
-    text-align: center; /* タイトルを中央揃え */
 }
 
-#randomizeBtn, #randomizeBtn2 {
-    padding: 10px 20px; /* ボタンのパディング */
-    font-size: 16px; /* フォントサイズ */
-    background-color: #4CAF50; /* ボタンの背景色 */
+#randomizeBtn, #randomizeBtn2, #randomizeBtn3 {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50; /* ボタンの色 */
     color: white; /* ボタンの文字色 */
-    border: none; /* ボーダーをなし */
-    border-radius: 5px; /* ボタンの角を丸く */
-    cursor: pointer; /* カーソルをポインターに */
-    margin: 10px; /* ボタンの間隔 */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px; /* ボタンの間隔を追加 */
 }
 
-#randomizeBtn:hover, #randomizeBtn2:hover {
-    background-color: #45a049; /* ホバー時の背景色 */
+#randomizeBtn:hover, #randomizeBtn2:hover, #randomizeBtn3:hover {
+    background-color: #45a049; /* ホバー時の色 */
 }
 
-#songList {
-    margin-top: 20px; /* 曲リストの上の余白 */
+#songList, #songList2, #songList3 {
+    margin-top: 20px;
     font-size: 24px; /* 曲名のフォントサイズ */
     text-align: center; /* 曲名を中央揃え */
-    padding-left: 0px; /* 左の余白（必要に応じて調整） */
+    padding-left: 20px; /* 左の余白を追加 */
 }
 
 .song-item {
     margin: 5px 0; /* 各曲名の間隔 */
 }
 
-.error-message {
-    color: red; /* エラーメッセージの色 */
-    font-size: 18px; /* エラーメッセージのフォントサイズ */
-}
-
 .contact-message {
-    position: fixed; /* 固定位置 */
-    bottom: 20px; /* 下からの距離 */
-    right: 20px; /* 右からの距離 */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
     background-color: rgba(255, 255, 255, 0.9); /* 半透明の背景 */
-    border: 1px solid #ccc; /* ボーダー */
-    border-radius: 5px; /* 角を丸く */
-    padding: 10px; /* 内側の余白 */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* ボックスシャドウ */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000; /* 最前面に表示 */
     font-size: 14px; /* フォントサイズ */
     color: #333; /* 文字の色 */
-}
+}    
 
-a {
-    color: #4CAF50; /* リンクの色 */
-    text-decoration: none; /* 下線をなし */
-}
-
-a:hover {
-    text-decoration: underline; /* ホバー時に下線を追加 */
+.error-message {
+    color: red; /* エラーメッセージの色 */
+    font-size: 18px;
 }
