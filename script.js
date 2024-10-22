@@ -701,15 +701,15 @@ function clearSongLists() {
     document.getElementById('songList').innerHTML = ''; // 曲リスト1をクリア
     document.getElementById('songList2').innerHTML = ''; // 曲リスト2をクリア
     document.getElementById('songList3').innerHTML = ''; // 曲リスト3をクリア
+    document.getElementById('resultTitle').textContent = ''; // 結果タイトルをクリア
 }
 
 // 1つ目のボタンのイベントリスナー
 document.getElementById('randomizeBtn').addEventListener('click', () => {
-    clearSongLists(); // 他のリストをクリア
+    clearSongLists(); // すべての曲リストをクリア
     const selectedSongs = getRandomSongs(songsList1, 4); // 4曲を選ぶ
     const songListDiv = document.getElementById('songList');
-    const resultTitle = document.getElementById('resultTitle');
-    resultTitle.textContent = "☆10全曲からの選曲結果"; // 結果のタイトルを表示
+    document.getElementById('resultTitle').textContent = "☆10全曲からの選曲結果"; // 結果のタイトルを表示
 
     selectedSongs.forEach(song => {
         const songItem = document.createElement('div');
@@ -721,11 +721,10 @@ document.getElementById('randomizeBtn').addEventListener('click', () => {
 
 // 2つ目のボタンのイベントリスナー
 document.getElementById('randomizeBtn2').addEventListener('click', () => {
-    clearSongLists(); // 他のリストをクリア
+    clearSongLists(); // すべての曲リストをクリア
     const selectedSongs = getRandomSongs(songsList2, 4); // 4曲を選ぶ
     const songListDiv = document.getElementById('songList2');
-    const resultTitle = document.getElementById('resultTitle');
-    resultTitle.textContent = "A＋以下からの選曲結果"; // 結果のタイトルを表示
+    document.getElementById('resultTitle').textContent = "A＋以下からの選曲結果"; // 結果のタイトルを表示
 
     selectedSongs.forEach(song => {
         const songItem = document.createElement('div');
@@ -737,11 +736,10 @@ document.getElementById('randomizeBtn2').addEventListener('click', () => {
 
 // 3つ目のボタンのイベントリスナー
 document.getElementById('randomizeBtn3').addEventListener('click', () => {
-    clearSongLists(); // 他のリストをクリア
+    clearSongLists(); // すべての曲リストをクリア
     const selectedSongs = getRandomSongs(songsList3, 4); // 4曲を選ぶ
     const songListDiv = document.getElementById('songList3');
-    const resultTitle = document.getElementById('resultTitle');
-    resultTitle.textContent = "双打除く個人差A以上から選曲"; // 結果のタイトルを表示
+    document.getElementById('resultTitle').textContent = "曲リスト3からの選曲結果"; // 結果のタイトルを表示
 
     selectedSongs.forEach(song => {
         const songItem = document.createElement('div');
