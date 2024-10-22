@@ -31,14 +31,14 @@ h1 {
 
 /* 結果タイトルのスタイル */
 #resultTitle {
-    font-size: 28px; /* フォントサイズ */
+    font-size: 24px; /* フォントサイズ */
     margin-top: 20px; /* 上の余白 */
 }
 
 /* 曲リストのスタイル設定 */
 #songList, #songList2, #songList3 {
     margin-top: 20px; /* 上の余白 */
-    font-size: 24px; /* フォントサイズ */
+    font-size: 18px; /* フォントサイズ */
     text-align: center; /* 中央揃え */
 }
 
