@@ -5,6 +5,9 @@ body {
 
 #songList {
     margin-top: 20px;
+    font-size: 24px; /* 曲名のフォントサイズ */
+    text-align: left; /* 左揃えにする */
+    padding-left: 20px; /* 左の余白を追加 */
 }
 
 .song-item {
