@@ -1,4 +1,4 @@
-const songs = [
+const songsList1 = [
 
     { 曲名: "イオシス秋の爆食祭2024" },
     { 曲名: "Irregular Clock（裏）" },
@@ -304,7 +304,16 @@ const songs = [
  
 ];   
 
-function getRandomSongs(num) {
+const songsList2 = [
+    { 曲名: "Song F" },
+    { 曲名: "Song G" },
+    { 曲名: "Song H" },
+    { 曲名: "Song I" },
+    { 曲名: "Song J" },
+];
+
+// 曲をランダムに取得する関数
+function getRandomSongs(songs, num) {
     const shuffled = [...songs]; // 元の配列をコピー
     for (let i = shuffled.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1)); // ランダムなインデックス
@@ -313,8 +322,23 @@ function getRandomSongs(num) {
     return shuffled.slice(0, num); // 最初のnum曲を返す
 }
 
+// 1つ目のボタンのイベントリスナー
 document.getElementById('randomizeBtn').addEventListener('click', () => {
-    const selectedSongs = getRandomSongs(4); // 4曲を選ぶ
+    const selectedSongs = getRandomSongs(songsList1, 4); // songsList1から4曲を選ぶ
+    const songListDiv = document.getElementById('songList');
+    songListDiv.innerHTML = ''; // 以前の結果をクリア
+
+    selectedSongs.forEach(song => {
+        const songItem = document.createElement('div');
+        songItem.className = 'song-item'; // クラスを追加
+        songItem.textContent = song.曲名; // 曲名を表示
+        songListDiv.appendChild(songItem);
+    });
+});
+
+// 2つ目のボタンのイベントリスナー
+document.getElementById('randomizeBtn2').addEventListener('click', () => {
+    const selectedSongs = getRandomSongs(songsList2, 4); // songsList2から4曲を選ぶ
     const songListDiv = document.getElementById('songList');
     songListDiv.innerHTML = ''; // 以前の結果をクリア
 
